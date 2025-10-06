@@ -1,0 +1,131 @@
+:root {
+  --color-primario: #960018;
+  --color-secundario: #F5F5F5;
+  --color-acento: #1F305E;
+  --fuente-principal: 'Open Sans', 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-secundario);
+  scroll-behavior: smooth;
+}
+
+#encabezado{
+  color: white !important;
+  background-color: var(--color-primario) !important;
+  font-size: 1.2rem; 
+  line-height: 1.8em;
+}
+
+.rojo-svg {
+  filter: invert(17%) sepia(99%) saturate(7490%) hue-rotate(356deg) brightness(97%) contrast(108%);
+}
+
+.video {
+  width:100%;
+  margin-bottom: 10px;
+}
+
+.bg-danger {
+  background-color: var(--color-primario) !important;
+}
+
+.text-danger {
+  color: var(--color-primario) !important;
+}
+
+.text-accent {
+  color: var(--color-acento) !important;
+}
+
+.extra-bold {
+  font-weight: 900;
+}
+
+.escarchado {
+  background-color: rgba(158, 159, 212, 0.7); /* blanco semitransparente */
+  -webkit-backdrop-filter: blur(10px); /* compatibilidad Safari */
+  backdrop-filter: blur(1px); /* efecto escarchado */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border-color: white;
+  /*color: #000; /* texto oscuro para contraste */
+}
+.small {
+  font-size: 0.8rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.videotext {
+  /* color: var(--color-secundario); */
+  text-shadow: 1px 1px 1px var(--color-acento);
+  /* font-weight: bold; */
+}
+
+.btn-danger {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.novinyetas {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.novinyetas a {
+  text-decoration: none;
+  color: white;
+}
+
+.novinyetas a:hover {
+  font-size: 1.1em;
+  color:aliceblue;
+}
+
+.horizontal {
+  display: inline-block;
+  margin-right: 20px ;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  flex: 1 0 30%; /* Ajusta el ancho de cada tarjeta */
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .card {
+    flex: 1 0 100%; /* En móvil, una por fila */
+  }
+}
+
+
+
