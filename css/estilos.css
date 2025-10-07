@@ -3,17 +3,20 @@
   --color-secundario: #F5F5F5;
   --color-acento: #1F305E;
   --fuente-principal: 'Open Sans', 'Roboto', sans-serif;
+  --fuente-titulo: Montserrat, Inter, Roboto, sans-serif;
 }
 
 body {
+  margin: 0 auto;
+  width: 95%;
   font-family: var(--fuente-principal);
   background-color: var(--color-secundario);
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 #encabezado{
   color: white !important;
-  background-color: var(--color-primario) !important;
+  background-color: #000 !important;
   font-size: 1.2rem; 
   line-height: 1.8em;
 }
@@ -22,9 +25,19 @@ body {
   filter: invert(17%) sepia(99%) saturate(7490%) hue-rotate(356deg) brightness(97%) contrast(108%);
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
 .video {
   width:100%;
-  margin-bottom: 10px;
+  height: auto;
+  display: block;
+  /* margin-bottom: 10px; */
 }
 
 .bg-danger {
@@ -60,10 +73,40 @@ body {
   font-weight: 700;
 }
 
-.videotext {
-  /* color: var(--color-secundario); */
+.video-text {
   text-shadow: 1px 1px 1px var(--color-acento);
-  /* font-weight: bold; */
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+}
+
+.card-title1 {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  word-break: break-word;
+  line-height: 1.3;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .btn-danger {
@@ -113,6 +156,14 @@ body {
 .card {
   flex: 1 0 30%; /* Ajusta el ancho de cada tarjeta */
   min-width: 250px;
+}
+@media (max-width: 600px) {
+  .video-text {
+    bottom: 5%;
+    left: 2%;
+    right: 2%;
+    padding: 0.4em;
+  }
 }
 
 @media (max-width: 768px) {
